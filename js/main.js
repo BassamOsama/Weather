@@ -84,4 +84,20 @@ function displayAnother(a) {
   </div>`;
   document.getElementById("forecast").innerHTML += t;
 }
+function getLocation() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let url = `https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${lat},${lon}&days=3`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      displayCurrent(data.location, data.current);
+      displayAnother(data.forecast.forecastday);
+    })
+    .catch((error) => console.log(error));
+}
+getLocation();
 search("Cairo");
