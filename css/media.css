@@ -1,0 +1,44 @@
+/*? -------------------------- bootStrap breakPoints ------------------------- */
+/*! xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px */
+@media (max-width: 576px) {
+    .container {
+        margin: 0;
+    }
+    .logo {
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 992px) {
+    .today .degree {
+        display: flex;
+    }
+    .today .num {
+        width: 50%;
+    }
+    .today .forecast-icon {
+        margin-top: 40px;
+    }
+    .navbar-nav {
+        text-align: center;
+        background-color: #262936;
+    }
+    .nav-link {
+        padding: 20px 0px;
+        border-color: transparent transparent transparent transparent;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navbar-nav {
+        margin-top: 30px;
+        border-radius: 5%;
+        overflow: hidden;
+    }
+}
+@media (max-width: 550px) {
+    .today .degree {
+        display: block;
+    }
+    .today .forecast-icon {
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--! ----------------------------- meta ------------------------------------ -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Bassam Osama" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--! ----------------------------- page title ------------------------------ -->
+    <title>Weather</title>
+    <!--! ----------------------------- fav icon -------------------------------- -->
+    <link href="images/favicon.png" rel="icon" />
+    <!--! ----------------------------- font awesome ---------------------------- -->
+    <link rel="stylesheet" href="css/lib/all.min.css" />
+    <!--! ----------------------------- bootstrap css --------------------------- -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+    <!--! ----------------------------- google fonts ---------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--! ----------------------------- bootstrap icons ------------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!--! ----------------------------- local css ------------------------------- -->
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <!--! ------------------------------- nav -------------------------------- -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+      <div class="container">
+        <a class="navbar-brand logo d-flex ms-5" href="index.html">
+          <img src="images/clouds.png" alt="clouds" class="logo" />
+          <div class="logo-txt">
+            <h1 class="title">Weather</h1>
+            <p class="desc">tagline goes here</p>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--! --------------------------- end of nav ----------------------------- -->
+    <!--! -------------------------------- main --------------------------------- -->
+    <main>
+      <div class="hero">
+        <div class="container">
+          <form class="position-relative">
+            <input
+              type="text"
+              placeholder="Find Your Location..."
+              class="rounded-5 w-100 loc"
+              id="search"
+            />
+            <input
+              type="button"
+              value="Find"
+              class="position-absolute btn-loc rounded-5"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="forecast-table">
+        <div class="container d-flex">
+          <div class="forecast-container">
+            <div class="row w-100" id="forecast"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--! ----------------------------- end of main ----------------------------- -->
+    <!--! ------------------------------- footer -------------------------------- -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <form>
+              <input
+                class="subscribe"
+                type="text"
+                placeholder="Enter your email to subscribe..."
+              />
+              <input class="subscribe-btn" type="submit" value="Subscribe" />
+            </form>
+          </div>
+          <div class="col-lg-1 col-md-12"></div>
+          <div class="col-lg-3 col-md-12 mb-4">
+            <div class="social-links">
+              <a href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://x.com/?mx=2"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://www.google.com/"
+                ><i class="fa-brands fa-google-plus-g"></i
+              ></a>
+              <a href="https://www.pinterest.com/"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <p>
+          Copyright 2014 Company name. Designed by Themezy. All rights reserved
+        </p>
+      </div>
+    </footer>
+    <!--! ---------------------------- end of footer ---------------------------- -->
+    <!--! ----------------------------- bootstrap js ---------------------------- -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <!--! ----------------------------- local js -------------------------------- -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
